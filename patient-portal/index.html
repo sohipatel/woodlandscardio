@@ -94,8 +94,9 @@ div.breadcrumbs {font-size:10px;}
 .social_icons a {padding-bottom:8px;}
 .small_banner .page-banner-heading {font-weight:300;padding-bottom:3px;}
 h3 {font-size: 16px;font-weight: 600;}
-.patient-portal-page #main-wrap {width:100%;}
-.patient-portal-page .page_content {width:100%;float:none;box-sizing:border-box;}
+.patient-portal-page #content-container {padding-left:24px;padding-right:24px;box-sizing:border-box;}
+.patient-portal-page #main-wrap {width:100%;max-width:960px;margin-left:auto;margin-right:auto;float:none;}
+.patient-portal-page .page_content {width:100%;max-width:880px;margin-left:auto;margin-right:auto;padding-left:32px;padding-right:32px;float:none;box-sizing:border-box;}
 .portal-intro {max-width:760px;margin:0 auto 28px;text-align:center;}
 .portal-intro h2 {margin-bottom:10px;}
 .portal-overview {display:flex;align-items:center;gap:36px;margin:0 0 38px;}
@@ -112,6 +113,8 @@ h3 {font-size: 16px;font-weight: 600;}
 .portal-notice {margin:12px 0 0;padding:12px 15px;border-left:4px solid #b20838;background:#f7f7f7;}
 .portal-final-step {margin:8px 0 0;}
 @media only screen and (max-width: 720px) {
+    .patient-portal-page #content-container {padding-left:10px;padding-right:10px;}
+    .patient-portal-page .page_content {padding-left:14px;padding-right:14px;}
     .portal-overview {display:block;}
     .portal-qr-column {margin-bottom:28px;}
     .portal-qr-placeholder {width:250px;height:250px;}
