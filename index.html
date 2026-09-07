@@ -98,6 +98,23 @@ div.breadcrumbs {font-size:10px;}
 .social_icons a {padding-bottom:8px;}
 .small_banner .page-banner-heading {font-weight:300;padding-bottom:3px;}
 h3 {font-size: 16px;font-weight: 600;}
+.home-portal-section {padding:28px 0;background:#f6f6f6;border-top:1px solid #e2e2e2;border-bottom:1px solid #dedede;}
+.home-portal-inner {display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.home-portal-copy {flex:1;min-width:0;}
+.home-portal-copy h2 {margin:0 0 7px;color:#8f0630;font-size:26px;font-weight:600;}
+.home-portal-copy p {margin:0;font-size:16px;line-height:1.55;}
+.home-portal-actions {flex:0 0 auto;text-align:center;}
+.home-portal-button {display:inline-block;padding:13px 26px;border-radius:3px;background:#a1083a;color:#fff !important;font-size:16px;font-weight:600;line-height:1.3;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,.18);}
+.home-portal-button:hover,.home-portal-button:focus {background:#79062c;color:#fff !important;text-decoration:none;}
+.home-portal-button:focus {outline:3px solid rgba(161,8,58,.28);outline-offset:3px;}
+.home-portal-help {display:block;margin-top:9px;font-size:13px;}
+@media only screen and (max-width: 720px) {
+    .home-portal-section {display:block !important;padding:24px 0;}
+    .home-portal-inner {display:block !important;padding-left:18px;padding-right:18px;text-align:center;box-sizing:border-box;}
+    .home-portal-copy h2 {font-size:23px;}
+    .home-portal-actions {display:block !important;width:100%;margin-top:18px;}
+    .home-portal-button {display:block;width:100%;max-width:320px;margin:0 auto;box-sizing:border-box;}
+}
 .business-hours .day, strong, .tabs_type_1 dt, .tabs_type_2 dt, .accordion dt, .tt-contentbox-title span, .tt-dropcap-round, .tt-dropcap-square, .tt-dropcap-text {font-weight: 600;}
 .preview h2, .preview h2 a {font-size:22px;}
 .widget-heading {font-size: 15px;font-weight: 600;}
@@ -163,7 +180,7 @@ header {padding:32px 0;}</style>
 <li id="menu-item-2457" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2457">
 <a href="#">Patient Hub</a>
 <ul class="sub-menu">
-	<li id="menu-item-patient-portal-access" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item current_page_item"><a href="/patient-portal/" aria-current="page">Access Portal</a></li>
+	<li id="menu-item-patient-portal-access" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/patient-portal/">Access Portal</a></li>
 	<li id="menu-item-2653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2653"><a href="/forms/">Patient Forms</a></li>
 	<li id="menu-item-2616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2616"><a href="/make-a-payment/">Make a Payment</a></li>
 	<li id="menu-item-2580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2580"><a href="/procedure-videos/">Procedure Videos</a></li>
@@ -245,6 +262,18 @@ navPrevNext : true,
         <div class="shadow bottom"></div>
         <div class="tt-overlay"></div>
     </section>
+<section class="home-portal-section" aria-labelledby="home-portal-heading">
+    <div class="center-wrap home-portal-inner">
+        <div class="home-portal-copy">
+            <h2 id="home-portal-heading">Patient Portal</h2>
+            <p>Access your secure patient portal to communicate with your care team, review health information, manage appointments, and view statements.</p>
+        </div>
+        <div class="home-portal-actions">
+            <a class="home-portal-button" href="https://pp-wfe-102.advancedmd.com/142884/account/logon" target="_blank" rel="noopener">Access Patient Portal</a>
+            <a class="home-portal-help" href="/patient-portal/">Need help setting up your account?</a>
+        </div>
+    </div>
+</section>
 <section id="content-container" class="clearfix">    <div id="main-wrap" class="clearfix">
         <h1>Cutting Edge Cardiac Care in Montgomery County</h1>
 <p>Woodlands Cardio was established by Dr. Sanjay Patel in 2010 to serve the residents of Montgomery County. Woodlands Cardio is committed to providing patient care that is compassionate, appropriate and effective for the treatment of cardiovascular and peripheral vascular disease and the promotion of health.</p>
