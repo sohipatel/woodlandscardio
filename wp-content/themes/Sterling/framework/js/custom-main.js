@@ -369,7 +369,7 @@ function doAccordion(){
 /* ------------------------------------------------------------------------
 Gallery Image Fade
 * ------------------------------------------------------------------------- */
-jQuery('.hover-item').live('hover', function(e) {
+jQuery(document).on('mouseenter mouseleave', '.hover-item', function(e) {
 		if( e.type == 'mouseenter' )
 			jQuery(this).stop().animate({opacity:0.3},400);
 
@@ -408,28 +408,60 @@ jQuery('#iso-wrap').isotope({ layoutMode : 'fitRows' });
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	Select Element - Responsive Navigation
+/*	Accessible Responsive Navigation
 /*-----------------------------------------------------------------------------------*/
-jQuery("<select />").appendTo("header nav");
+jQuery(function($) {
+	$('header nav').each(function() {
+		var nav = $(this);
+		var menu = nav.children('ul').first();
 
-// Create default option "Go to..."
-jQuery("<option />", {
-   "selected": "selected",
-   "value"   : "",
-   "text"    : "Select a page:"
-}).appendTo("nav select");
+		if (!menu.length || nav.children('select.mobile-nav-select').length) {
+			return;
+		}
 
-// Populate dropdown with menu items
-jQuery("nav a").each(function() {
- var el = jQuery(this);
- jQuery("<option />", {
-     "value"   : el.attr("href"),
-     "text"    : el.text()
- }).appendTo("nav select");
-});
+		var select = $('<select />', {
+			'class': 'mobile-nav-select',
+			'aria-label': 'Site navigation'
+		});
 
-jQuery("nav select").change(function() {
-  window.location = jQuery(this).find("option:selected").val();
+		var prompt = $('<option />', {
+			'value': '',
+			'text': 'Menu — Select a page',
+			'disabled': true,
+			'selected': true
+		}).appendTo(select);
+
+		menu.find('a').each(function() {
+			var link = $(this);
+			var item = link.closest('li');
+			var href = link.attr('href') || '';
+			var depth = link.parentsUntil(menu, 'ul').length;
+			var prefix = new Array(depth + 1).join('— ');
+			var option = $('<option />', {
+				'value': (href === '#') ? '' : href,
+				'text': prefix + $.trim(link.text())
+			});
+
+			if (!href || href === '#') {
+				option.prop('disabled', true);
+			}
+
+			if (item.hasClass('current-menu-item') || item.hasClass('current_page_item')) {
+				prompt.prop('selected', false);
+				option.prop('selected', true);
+			}
+
+			option.appendTo(select);
+		});
+
+		select.on('change', function() {
+			if (this.value) {
+				window.location.href = this.value;
+			}
+		});
+
+		nav.append(select).addClass('mobile-menu-ready');
+	});
 });
 
 
