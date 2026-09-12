@@ -108,12 +108,25 @@ h3 {font-size: 16px;font-weight: 600;}
 .home-portal-button:hover,.home-portal-button:focus {background:#79062c;color:#fff !important;text-decoration:none;}
 .home-portal-button:focus {outline:3px solid rgba(161,8,58,.28);outline-offset:3px;}
 .home-portal-help {display:block;margin-top:9px;font-size:13px;}
+.home-interview-feature {display:flex;align-items:center;justify-content:space-between;gap:30px;margin:8px 0 28px;padding:24px 28px;border-left:5px solid #a1083a;background:#f6f6f6;box-sizing:border-box;}
+.home-interview-copy {flex:1;min-width:0;}
+.home-interview-label {display:block;margin-bottom:5px;color:#8f0630;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.home-interview-copy h2 {margin:0 0 8px;font-size:24px;font-weight:600;}
+.home-interview-copy p {margin:0;font-size:15px;line-height:1.55;}
+.home-interview-action {flex:0 0 auto;}
+.home-interview-button {display:inline-block;padding:12px 22px;border-radius:3px;background:#a1083a;color:#fff !important;font-size:15px;font-weight:600;line-height:1.3;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,.18);}
+.home-interview-button:hover,.home-interview-button:focus {background:#79062c;color:#fff !important;text-decoration:none;}
+.home-interview-button:focus {outline:3px solid rgba(161,8,58,.28);outline-offset:3px;}
 @media only screen and (max-width: 720px) {
     .home-portal-section {display:block !important;padding:24px 0;}
     .home-portal-inner {display:block !important;padding-left:18px;padding-right:18px;text-align:center;box-sizing:border-box;}
     .home-portal-copy h2 {font-size:23px;}
     .home-portal-actions {display:block !important;width:100%;margin-top:18px;}
     .home-portal-button {display:block;width:100%;max-width:320px;margin:0 auto;box-sizing:border-box;}
+    .home-interview-feature {display:block !important;margin:8px 0 24px;padding:22px 18px;text-align:center;}
+    .home-interview-copy h2 {font-size:21px;}
+    .home-interview-action {display:block !important;width:100%;margin-top:17px;}
+    .home-interview-button {display:block;width:100%;max-width:300px;margin:0 auto;box-sizing:border-box;}
 }
 .business-hours .day, strong, .tabs_type_1 dt, .tabs_type_2 dt, .accordion dt, .tt-contentbox-title span, .tt-dropcap-round, .tt-dropcap-square, .tt-dropcap-text {font-weight: 600;}
 .preview h2, .preview h2 a {font-size:22px;}
@@ -303,6 +316,16 @@ navPrevNext : true,
 <p><a href="/peripheral-artery-disease/" class="small red-2 tt-button" target="_self"> Learn More </a></p>
 </div>
 <div class="hr hr-dotted">&nbsp;</div>
+<section class="home-interview-feature" aria-labelledby="featured-interview-heading">
+    <div class="home-interview-copy">
+        <span class="home-interview-label">Featured Interview</span>
+        <h2 id="featured-interview-heading">Dr. Sanjay Patel on the Transradial Approach</h2>
+        <p>Read Dr. Patel&#8217;s interview with Angioplasty.Org about the wrist-based approach to cardiac catheterization, patient recovery, and advancing transradial training.</p>
+    </div>
+    <div class="home-interview-action">
+        <a class="home-interview-button" href="https://www.ptca.org/radial/interview_sanjay_patel.html" target="_blank" rel="noopener">Read the Interview</a>
+    </div>
+</section>
 <div class="hr hr-dotted">&nbsp;</div>
 <section id="home-marketing-blogposts"><h3>
 <span class="section_title">Articles</span><div class="article_preview">
