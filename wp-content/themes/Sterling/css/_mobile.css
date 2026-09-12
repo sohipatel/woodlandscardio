@@ -5,6 +5,61 @@
 	#tt-boxed-layout .banner-slider .center-wrap {width: 97%;}
 }
 
+
+/* ------------------------------------------------------------------------
+Shared responsive navigation repair for the static site export
+------------------------------------------------------------------------- */
+@media screen and (max-width: 800px) {
+	header .center-wrap {
+		height: auto !important;
+		min-height: 0;
+	}
+
+	header nav {
+		position: relative !important;
+		top: auto !important;
+		right: auto !important;
+		float: none !important;
+		clear: both;
+		width: 100% !important;
+		margin: 18px auto 0 !important;
+		padding: 0 0 8px !important;
+	}
+
+	/* If JavaScript is unavailable, retain the original links as a fallback. */
+	header nav > ul {
+		display: block !important;
+	}
+
+	header nav.mobile-menu-ready > ul {
+		display: none !important;
+	}
+
+	header nav > select.mobile-nav-select {
+		display: block !important;
+		width: calc(100% - 32px);
+		max-width: 440px;
+		height: 46px;
+		margin: 0 auto !important;
+		padding: 0 42px 0 14px;
+		border: 1px solid #c9c9c9;
+		border-radius: 4px;
+		background-color: #fff;
+		box-shadow: 0 2px 7px rgba(0,0,0,.10);
+		color: #4b4b4b;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 46px;
+		cursor: pointer;
+	}
+
+	header nav > select.mobile-nav-select:focus {
+		border-color: #a1083a;
+		outline: 3px solid rgba(161,8,58,.18);
+		outline-offset: 2px;
+	}
+}
+
 @media screen and (max-width: 990px){/*Allow 30px for the scrollbar*/
 .top-aside, header, .banner, .banner-slider, .small_banner, #content-container, .footer-callout, footer {
 min-width:100%;
